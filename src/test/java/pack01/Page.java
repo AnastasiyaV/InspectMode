@@ -3,6 +3,7 @@ package pack01;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pack01.pages.*;
 
@@ -88,5 +89,9 @@ public class Page {
     public String getText(WebElement element) {
         logger.info("Getting Text from Webelement");
         return element.getText();
+    }
+
+    public void wait(ExpectedCondition<WebElement> presenceOfElementLocated) {
+        logger.info(String.format("Waiting if [%s] webelement is present", presenceOfElementLocated));
     }
 }

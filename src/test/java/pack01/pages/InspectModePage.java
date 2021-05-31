@@ -2,6 +2,7 @@ package pack01.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pack01.Page;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class InspectModePage {
     private final int PAUSE_TIME = 3000;
     private List<WebElement> imagesList;
     private int expectedQuantityImages = 8;
+
 
     public By horizontalPanel = By.xpath("//div[@class='Panel horizontal Pane1  ']");
     public By assets = By.xpath("//div[normalize-space()='Assets']//div");
@@ -43,7 +45,7 @@ public class InspectModePage {
     public InspectModePage clickAssets() throws InterruptedException {
         logger.info("Clicking On Assets tab");
         page.click(assets);
-        pause(PAUSE_TIME);
+        page.wait(ExpectedConditions.presenceOfElementLocated(rectangle6Asset));
         return this;
     }
 
