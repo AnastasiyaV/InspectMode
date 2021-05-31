@@ -14,7 +14,7 @@ import static org.testng.Assert.assertTrue;
 public class InspectModePage {
     private static final Logger logger = Logger.getLogger(InspectModePage.class.getName());
     private final Page page;
-    private final int PAUSE_TIME = 3000;
+    private final int PAUSE_TIME = 2000;
     private List<WebElement> imagesList;
     private int expectedQuantityImages = 8;
 
