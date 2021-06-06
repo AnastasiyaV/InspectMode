@@ -26,7 +26,8 @@ public class InspectModePageTest extends BaseTest {
                 .clickAssets()
                 .verifyRectangle6IsPresent();
     }
-     @Test
+
+    @Test
     public void testVerifyCountImagesElements() throws Exception {
         page.openUrl(baseURL);
         page.authPage().verifyAuthH1Title()

@@ -19,11 +19,11 @@ public class InspectModePage {
     private int expectedQuantityImages = 8;
 
 
-    public By horizontalPanel = By.xpath("//div[@class='Panel horizontal Pane1  ']");
-    public By assets = By.xpath("//div[normalize-space()='Assets']//div");
-    public By rectangle6Asset = By.xpath("//div[text()='6-rectangle-data-1-xpng-2-xjpg-3-xtiff']");
+    private By horizontalPanel = By.xpath("//div[@class='Panel horizontal Pane1  ']");
+    private By assets = By.xpath("//div[normalize-space()='Assets']//div");
+    private By rectangle6Asset = By.xpath("//div[text()='6-rectangle-data-1-xpng-2-xjpg-3-xtiff']");
     //public By images = By.xpath("//div[@class='sc-jXQZqI ciXEmf']");
-    public By images = By.xpath("//div[@class='sc-iYUSvU kAnoja']/div");
+    private By images = By.xpath("//div[@class='sc-iYUSvU kAnoja']/div");
 
     public InspectModePage(Page p) {
         logger.info("Inspect Mode Page construction");

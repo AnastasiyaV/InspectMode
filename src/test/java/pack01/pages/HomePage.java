@@ -13,10 +13,10 @@ public class HomePage {
     private final Page page;
     private final int WAIT_TIME = 5;
     private final int PAUSE_TIME = 3000;
-    public By allDocuments = By.xpath("//*[@class='styles__Root-sc-1myek4t-0 hKqKBY document-type-filter__title__3zFDVX']");
-    public By homeDocContainerTitleAssets = By.xpath("//div[normalize-space()='Assets with different asset size, formats']"); //div[@class='styles__StyledTruncate-sc-1775b73-10 dYMWxw']
-    public By docContainer = By.id("ds-container");
-    public By homeAssertTitle = By.xpath("//*[@id=\"app-shell:feature-root:home\"]/div/section/div[1]/div[4]/div[4]/div/div[1]/div/div[1]/div/div/div/div/div/article");
+    private By allDocuments = By.xpath("//*[@class='styles__Root-sc-1myek4t-0 hKqKBY document-type-filter__title__3zFDVX']");
+    private By homeDocContainerTitleAssets = By.xpath("//div[normalize-space()='Assets with different asset size, formats']"); //div[@class='styles__StyledTruncate-sc-1775b73-10 dYMWxw']
+    private By docContainer = By.id("ds-container");
+    private By homeAssertTitle = By.xpath("//*[@id=\"app-shell:feature-root:home\"]/div/section/div[1]/div[4]/div[4]/div/div[1]/div/div[1]/div/div/div/div/div/article");
 
     public HomePage(Page p) {
         logger.info("Home Page construction");
