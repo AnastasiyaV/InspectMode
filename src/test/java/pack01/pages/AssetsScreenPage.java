@@ -8,8 +8,7 @@ import static org.testng.Assert.assertTrue;
 public class AssetsScreenPage {
     private final Page page;
     private final int PAUSE_TIME = 3000;
-    public By inspectMode = By.xpath("//a[contains(.,'Enter Inspect Mode')]");
-
+    private By inspectMode = By.xpath("//a[contains(.,'Enter Inspect Mode')]");
 
     public AssetsScreenPage(Page p) {
         page = p;

@@ -8,8 +8,8 @@ import static org.testng.Assert.assertTrue;
 public class DocPage {
     private final Page page;
     private final int PAUSE_TIME = 3000;
-    public By overviewScreensWrapper = By.id("overviewScreensWrapper");
-    public By screenAssets = By.xpath("//a[.='View screen']");
+    private By overviewScreensWrapper = By.id("overviewScreensWrapper");
+    private By screenAssets = By.xpath("//a[.='View screen']");
 
     public DocPage(Page p) {
         page = p;

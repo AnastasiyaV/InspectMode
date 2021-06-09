@@ -18,7 +18,6 @@ public class InspectModePage {
     private List<WebElement> imagesList;
     private int expectedQuantityImages = 8;
 
-
     private By horizontalPanel = By.xpath("//div[@class='Panel horizontal Pane1  ']");
     private By assets = By.xpath("//div[normalize-space()='Assets']//div");
     private By rectangle6Asset = By.xpath("//div[text()='6-rectangle-data-1-xpng-2-xjpg-3-xtiff']");
@@ -52,6 +51,10 @@ public class InspectModePage {
     public void verifyRectangle6IsPresent() throws InterruptedException {
         logger.info("Verifying if Rectangle6 is Present");
         assertTrue(isElementPresent(rectangle6Asset));
+    }
+    public void verifyAssetNameIsCorrect(String name) throws InterruptedException {
+
+
     }
 
     public InspectModePage getImagesAsElements() {
