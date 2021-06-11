@@ -63,7 +63,7 @@ public class AuthPage {
         logger.info("Clicking the sign in button");
         assertTrue(isElementPresent(signInButton));
         page.click(signInButton);
-        String titleString = page.driver.findElement(allDocuments).getText();
+        String titleString = page.driver.findElement(allDocuments).getText(); //TODO: add a separate verify method
         pause(PAUSE_TIME);
         assertTrue(titleString.contains("All documents"));
         //pause(PAUSE_TIME);
