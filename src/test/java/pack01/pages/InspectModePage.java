@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import pack01.Page;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.logging.Logger;
 
 import static org.testng.Assert.assertEquals;
@@ -21,12 +22,24 @@ public class InspectModePage {
     private By horizontalPanel = By.xpath("//div[@class='Panel horizontal Pane1  ']");
     private By assets = By.xpath("//div[normalize-space()='Assets']//div");
     private By rectangle6Asset = By.xpath("//div[text()='6-rectangle-data-1-xpng-2-xjpg-3-xtiff']");
-    //public By images = By.xpath("//div[@class='sc-jXQZqI ciXEmf']");
     private By images = By.xpath("//div[@class='sc-iYUSvU kAnoja']/div");
+    private By heliosDialog = By.xpath("//div[@data-test-id=\"helios-dialog-foreground\"]");
+    private By heliosDialogButton = By.xpath("//button[contains(text(), 'Got it')]");
 
     public InspectModePage(Page p) {
         logger.info("Inspect Mode Page construction");
         page = p;
+    }
+
+    public InspectModePage closeHeliosDilogIfExists() {
+        try {
+            if (page.driver.findElement(heliosDialog).isDisplayed()) {
+                page.driver.findElement(heliosDialogButton).click();
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Element not present");
+        }
+        return this;
     }
 
     public InspectModePage verifyHorizontalPanelPresent() throws InterruptedException {
@@ -52,9 +65,8 @@ public class InspectModePage {
         logger.info("Verifying if Rectangle6 is Present");
         assertTrue(isElementPresent(rectangle6Asset));
     }
+
     public void verifyAssetNameIsCorrect(String name) throws InterruptedException {
-
-
     }
 
     public InspectModePage getImagesAsElements() {
@@ -65,15 +77,15 @@ public class InspectModePage {
 
     private int countImagesElements() {
         logger.info("Counting Images Elements");
-        int count=0;
-        for (WebElement element : imagesList ) {
+        int count = 0;
+        for (WebElement element : imagesList) {
             count++;
         }
         return count;
     }
 
-    public void imagesAssertQuantity (){
-        assertEquals(countImagesElements(),expectedQuantityImages);
+    public void imagesAssertQuantity() {
+        assertEquals(countImagesElements(), expectedQuantityImages);
     }
 
     @Override

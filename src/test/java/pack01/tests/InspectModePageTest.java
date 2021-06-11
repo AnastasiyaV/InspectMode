@@ -21,7 +21,8 @@ public class InspectModePageTest extends BaseTest {
         page.assetsScreenPage().verifyInspectModePresent()
                 .clickInspectMode();
 
-        page.inspectModePage().verifyAssetsPresent()
+        page.inspectModePage().closeHeliosDilogIfExists()
+                .verifyAssetsPresent()
                 .verifyAssetsPresent()
                 .clickAssets()
                 .verifyRectangle6IsPresent();
@@ -44,7 +45,8 @@ public class InspectModePageTest extends BaseTest {
         page.assetsScreenPage().verifyInspectModePresent()
                 .clickInspectMode();
 
-        page.inspectModePage().verifyAssetsPresent()
+        page.inspectModePage().closeHeliosDilogIfExists()
+                .verifyAssetsPresent()
                 .verifyAssetsPresent()
                 .clickAssets()
                 .getImagesAsElements()
