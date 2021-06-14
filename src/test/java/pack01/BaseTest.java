@@ -33,21 +33,20 @@ public class BaseTest {
         page = new Page(driver);
     }
 
-    private void waitForBrowserRerndered(){
+    private void waitForBrowserRerndered() {
         wait = new WebDriverWait(driver, SECONDSTOWAIT);
         driver.manage().timeouts().implicitlyWait(SECONDSTOWAIT, TimeUnit.SECONDS);
         wait.until(driver -> ((JavascriptExecutor) driver)
                 .executeScript("return document.readyState").equals("complete"));
     }
 
-    private void initializeProperties(){
+    private void initializeProperties() {
         baseURL = FileOperations.getConfigProperty("baseUrl");
         try {
             driver = getDriverType(FileOperations.getConfigProperty("browser"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @AfterClass(description = "Close browser")
