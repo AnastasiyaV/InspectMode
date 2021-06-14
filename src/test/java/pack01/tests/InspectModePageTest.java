@@ -23,7 +23,6 @@ public class InspectModePageTest extends BaseTest {
 
         page.inspectModePage().closeHeliosDilogIfExists()
                 .verifyAssetsPresent()
-                .verifyAssetsPresent()
                 .clickAssets()
                 .verifyRectangle6IsPresent();
     }
@@ -46,7 +45,6 @@ public class InspectModePageTest extends BaseTest {
                 .clickInspectMode();
 
         page.inspectModePage().closeHeliosDilogIfExists()
-                .verifyAssetsPresent()
                 .verifyAssetsPresent()
                 .clickAssets()
                 .getImagesAsElements()
