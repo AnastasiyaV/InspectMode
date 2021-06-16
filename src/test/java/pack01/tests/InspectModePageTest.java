@@ -12,7 +12,7 @@ public class InspectModePageTest extends BaseTest {
                 .inputUserPassword()
                 .clickButton();
 
-        page.homePage().getCurrentUrl()
+        page.homePage().verifyHomeHeader()
                 .clickOnAssetsDoc();
 
         page.docPage().verifyOverviewScreensWrapperrPresent()
@@ -35,7 +35,7 @@ public class InspectModePageTest extends BaseTest {
                 .inputUserPassword()
                 .clickButton();
 
-        page.homePage().getCurrentUrl()
+        page.homePage().verifyHomeHeader()
                 .clickOnAssetsDoc();
 
         page.docPage().verifyOverviewScreensWrapperrPresent()

@@ -14,14 +14,11 @@ public class Page {
     private int timeOut = 10;
     public WebDriver driver;
     public WebDriverWait wait;
-
-    //Pack01.Pages
     private AuthPage authPage;
     private HomePage homePage;
     private DocPage docPage;
     private AssetsScreenPage assetsScreenPage;
     private InspectModePage inspectModePage;
-
 
     public Page(WebDriver driver) {
         logger.info("Page construction");
@@ -58,7 +55,6 @@ public class Page {
     public void openUrl(String url) {
         logger.info("Openning the URL");
         driver.get(url);
-        //wait.until(driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
     }
 
     public void click(By selector) {

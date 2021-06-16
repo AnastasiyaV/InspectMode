@@ -4,31 +4,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class WebDriverFactory {
-//    private static final boolean REMOTE = FileOperations.getConfigProperty("remote").equals("true");
-//    private static final String HUB = FileOperations.getConfigProperty("hub");
     public WebDriver webDriver;
 
     public static WebDriver getDriverType(String browser) throws Exception {
         WebDriver webDriver;
         switch (browser){
             case "chrome":
-            case "chromedriver":
-            case "ch":
+                System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--disable-notifications");
                 chromeOptions.addArguments("start-maximized");
-                chromeOptions.addArguments("incognito");
                 webDriver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":
-                FirefoxOptions ffOptions = new FirefoxOptions();
-                webDriver = new FirefoxDriver(ffOptions);
+                System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver");
+                webDriver = new FirefoxDriver();
                 break;
             default:
-                throw new Exception("Add valid parameters 'browser'. instead of " + browser);
+                throw new Exception ("Add valid parameters 'browser'. instead of " + browser);
         }
          return webDriver;
     }

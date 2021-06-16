@@ -1,0 +1,11 @@
+pack01/utils/FileOperations.class
+pack01/tests/InspectModePageTest.class
+pack01/tests/AuthPageTest.class
+pack01/Page.class
+pack01/utils/WebDriverFactory.class
+pack01/pages/AuthPage.class
+pack01/pages/DocPage.class
+pack01/BaseTest.class
+pack01/pages/HomePage.class
+pack01/pages/InspectModePage.class
+pack01/pages/AssetsScreenPage.class

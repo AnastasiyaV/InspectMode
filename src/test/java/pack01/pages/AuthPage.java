@@ -2,9 +2,7 @@ package pack01.pages;
 
 import org.openqa.selenium.By;
 import pack01.Page;
-
 import java.util.logging.Logger;
-
 import static org.testng.Assert.assertTrue;
 
 public class AuthPage {
@@ -19,20 +17,11 @@ public class AuthPage {
     private By userPassword = By.xpath("//input[@id='signin_password']");
     private By signInButton = By.xpath("//button[normalize-space()='Sign in']");
     private By allDocuments = By.xpath("//div[@class='styles__Root-sc-1myek4t-0 cmYQek document-type-filter__title__3zFDVX']");
-    //private Object T;
 
     public AuthPage(Page p) {
         logger.info("Auth Page construction");
         page = p;
     }
-
-//  public <T> T clickButton(Class<T> contextClass) throws InterruptedException {
-//        assertTrue(isElementPresent(signInButton));
-//        page.click(signInButton);
-//        String titleString = page.driver.findElement(allDocuments).getText();
-//        pause(PAUSE_TIME);
-//        return (T) contextClass;
-//  }
 
     private void pause(int i) throws InterruptedException {
         Thread.sleep(i);
@@ -55,7 +44,6 @@ public class AuthPage {
         logger.info("Imputing user password");
         page.click(userLogin);
         page.typeText(userPassword, USER_PASSWORD);
-        pause(PAUSE_TIME);
         return this;
     }
 
@@ -63,12 +51,7 @@ public class AuthPage {
         logger.info("Clicking the sign in button");
         assertTrue(isElementPresent(signInButton));
         page.click(signInButton);
-        String titleString = page.driver.findElement(allDocuments).getText(); //TODO: add a separate verify method
-        pause(PAUSE_TIME);
-        assertTrue(titleString.contains("All documents"));
-        //pause(PAUSE_TIME);
     }
-
 
     public boolean isElementPresent(By element) {
         logger.info(String.format("Checking if [%s] element is present", element));
