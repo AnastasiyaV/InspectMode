@@ -26,29 +26,4 @@ public class InspectModePageTest extends BaseTest {
                 .clickAssets()
                 .verifyRectangle6IsPresent();
     }
-
-    @Test
-    public void testVerifyCountImagesElements() throws Exception {
-        page.openUrl(baseURL);
-        page.authPage().verifyAuthH1Title()
-                .inputUserLogin()
-                .inputUserPassword()
-                .clickButton();
-
-        page.homePage().verifyHomeHeader()
-                .clickOnAssetsDoc();
-
-        page.docPage().verifyOverviewScreensWrapperrPresent()
-                .clickAssetsScreen();
-
-        page.assetsScreenPage().verifyInspectModePresent()
-                .clickInspectMode();
-
-        page.inspectModePage().closeHeliosDilogIfExists()
-                .verifyAssetsPresent()
-                .clickAssets()
-                .getImagesAsElements()
-                .imagesAssertQuantity();
-    }
-
 }

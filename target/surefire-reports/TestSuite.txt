@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 2, Errors: 0, Skipped: 5, Time elapsed: 1.235 s <<< FAILURE! - in TestSuite
-setup(pack01.tests.InspectModePageTest)  Time elapsed: 0.683 s  <<< FAILURE!
-java.lang.NullPointerException
-
-setup(pack01.tests.AuthPageTest)  Time elapsed: 0.113 s  <<< FAILURE!
-java.lang.NullPointerException
-
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.077 s - in TestSuite

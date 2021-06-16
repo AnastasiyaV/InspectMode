@@ -5,6 +5,7 @@ pack01/Page.class
 pack01/utils/WebDriverFactory.class
 pack01/pages/AuthPage.class
 pack01/pages/DocPage.class
+pack01/tests/InspectModePageTestVerifyCountImagesElements.class
 pack01/BaseTest.class
 pack01/pages/HomePage.class
 pack01/pages/InspectModePage.class
